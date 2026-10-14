@@ -8,14 +8,13 @@ console = Console()
 
 
 def _value_for(i: int) -> str:
-    if i % 3 == 0:
-        return "Fizz"
-    if i % 5 == 0:
-        return "Buzz"
     if i % 15 == 0:
         return "FizzBuzz"
+    elif i % 3 == 0:
+        return "Fizz"
+    elif i % 5 == 0:
+        return "Buzz"
     return str(i)
-
 
 def _sequence(n: int) -> list[str]:
     return [_value_for(i) for i in range(1, n + 1)]
